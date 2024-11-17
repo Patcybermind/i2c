@@ -1,0 +1,64 @@
+#include <Wire.h>
+
+#define OLED_ADDRESS 0x3c  // I2C address for the OLED display
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+  Wire.begin();  // Join the I2C bus as a master
+  delay(1000);
+
+
+  // Initialize the display
+  initializeDisplay();
+}
+
+void loop() {
+  // Send 0xA0 multiple times (e.g., 10 times)
+  initializeDisplay();
+  sendCommand(0x0F);
+  sendCommand(0xaF);
+  sendCommand(0xdF);
+  delay(1);
+  
+}
+
+void initializeDisplay() {
+  delay(19);    // Wait for the display to power up
+  Wire.beginTransmission(OLED_ADDRESS);
+  Wire.write(0x00);  // Co = 0, D/C = 0 (command mode) i think it should also be 0x40 and yeah no 0 works great
+
+  // Send initialization commands
+  Wire.write(0xAE);  // Display Off
+  Wire.write(0xD5);  // Set Display Clock Divide Ratio / OSC Frequency
+  Wire.write(0x80);  // Suggested ratio
+  Wire.write(0xA8);  // Set Multiplex Ratio
+  Wire.write(0x3F);  // 64MUX
+  Wire.write(0xD3);  // Set Display Offset
+  Wire.write(0x00);  // No offset
+  Wire.write(0x40);  // Set Start Line
+  Wire.write(0x8D);  // Charge Pump Setting
+  Wire.write(0x14);  // Enable Charge Pump
+  Wire.write(0x20);  // Set Memory Addressing Mode
+  Wire.write(0x00);  // Horizontal Addressing Mode
+  Wire.write(0xA0);  // Set Segment Re-map
+  Wire.write(0xC0);  // Set COM Output Scan Direction
+  Wire.write(0x81);  // Set Contrast Control
+  Wire.write(0x7F);  // Maximum contrast
+  Wire.write(0xD9);  // Set Precharge Period
+  Wire.write(0xF1);  // Precharge period
+  Wire.write(0xDB);  // Set VCOMH Deselect Level
+  Wire.write(0x40);  // VCOMH level
+  Wire.write(0xA4);  // Entire Display On
+  Wire.write(0xA6);  // Set Normal Display
+  Wire.write(0xAF);  // Display On
+
+  Wire.endTransmission();  // End transmission
+}
+
+void sendCommand(uint8_t command) {
+  Wire.beginTransmission(OLED_ADDRESS);
+  Wire.write(0x40);  // Co = 0, D/C = 0 (command mode)
+  Wire.write(command);  // Send the specified command
+  Wire.endTransmission();  // End transmission
+}
