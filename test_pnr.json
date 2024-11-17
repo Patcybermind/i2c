@@ -1,0 +1,203 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.7-104-g437fb70e)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "27000000.000000",
+        "cst.filename": "/home/patcybermind/Documents/fpga/i2c/i2c/tangnano20k.cst",
+        "packer.partno": "GW2AR-LV18QN88C8/I7",
+        "packer.chipdb": "GW2A-18C",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:3.1-14.10"
+      },
+      "ports": {
+        "i2cSDA": {
+          "direction": "inout",
+          "bits": [ 9294 ]
+        },
+        "i2cSCL": {
+          "direction": "output",
+          "bits": [ 9293 ]
+        }
+      },
+      "cells": {
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X50Y27/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 9317 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 9317 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 9318 ]
+          }
+        },
+        "i2cSDA_IOBUF_IO": {
+          "hide_name": 0,
+          "type": "IOBUF",
+          "parameters": {
+            "NET_I": "GND",
+            "NET_IO": "NET",
+            "NET_O": "NET",
+            "NET_OEN": "GND"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y37/IOBB",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:4.8-4.14",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "OEN": "input",
+            "O": "output",
+            "IO": "inout",
+            "I": "input"
+          },
+          "connections": {
+            "OEN": [ 9318 ],
+            "O": [ 9302 ],
+            "IO": [ 9294 ],
+            "I": [ 9318 ]
+          }
+        },
+        "i2cSCL_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "GND",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y38/IOBA",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:5.9-5.15",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9293 ],
+            "I": [ 9318 ]
+          }
+        }
+      },
+      "netnames": {
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 9317 ] ,
+          "attributes": {
+            "ROUTING": "X0Y0/VCC;;1;X50Y27/S220;X50Y27/S220/VCC;1;X50Y27/C4;X50Y27/C4/S220;1"
+          }
+        },
+        "$i2cSDA$iobuf_i": {
+          "hide_name": 1,
+          "bits": [ 9309 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "i2cSDA_IOBUF_IO_O": {
+          "hide_name": 0,
+          "bits": [ 9302 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "i2cSDA": {
+          "hide_name": 0,
+          "bits": [ 9294 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:4.8-4.14"
+          }
+        },
+        "i2cSCL": {
+          "hide_name": 0,
+          "bits": [ 9293 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:5.9-5.15"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 9318 ] ,
+          "attributes": {
+            "ROUTING": "X55Y38/E270;X55Y38/E270/VSS;1;X55Y38/A0;X55Y38/A0/W271;1;X55Y37/W270;X55Y37/W270/VSS;1;X55Y37/D5;X55Y37/D5/W270;1;X0Y0/VSS;;1;X55Y37/E270;X55Y37/E270/VSS;1;X55Y37/D1;X55Y37/D1/E270;1"
+          }
+        }
+      }
+    }
+  }
+}

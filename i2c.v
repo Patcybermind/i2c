@@ -4,11 +4,13 @@ module top(
  inout i2cSDA,
  output i2cSCL
 );
-    wire scl;
+    wire sclWire;
     wire sdaOutWire;
     wire isSendingWire;
     assign i2cSDA = (isSendingWire & ~sdaOutWire) ? 1'b0 : 1'bz;
+    assign i2cSCL = sclWire;
 
+    
 endmodule
 
 module i2c (
@@ -19,18 +21,25 @@ module i2c (
     output reg isSending = 0,// WAS REG and issending and 0
     output isSendingWire,
     output reg scl = 1,
+    output wire sclWire,
     input [1:0] instruction,
     input enable,
     input [7:0] byteToSend,
     output reg [7:0] byteReceived =0,
-    output reg complete,
-    output reg [2:0] state = STATE_IDLE
+    output reg complete
+    //output reg [2:0] state = STATE_IDLE
 );
     assign isSendingWire = isSending;
     assign sdaOutWire = sdaOutReg;
-    
+    assign sclWire = scl;
 
-    localparam INST_START_TX = 0;
+    always @(posedge clk) begin
+        scl <= 1;
+        sdaOutReg <= 1;
+    end
+endmodule
+
+/*    localparam INST_START_TX = 0;
     localparam INST_STOP_TX = 1;
     localparam INST_READ_BYTE = 2;
     localparam INST_WRITE_BYTE = 3;
@@ -219,4 +228,5 @@ module i2c (
 
 
 endmodule
+*/
 
