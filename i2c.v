@@ -69,12 +69,12 @@ module top(
 
     reg [7:0] byteToSend;
     reg [2:0] state = STATE_IDLE;
-    reg complete;
+    reg complete= 1; // CAREFULL AS THIS MIGHT NOT INITIALIZE TO 1 ON REAL FPGA
 
     always @(posedge clk) begin
     case (state)
     	// states here
-        STATE_IDLE: begin
+        STATE_IDLE: begin // 4
             //if (enable) begin
             complete <= 0;
             clockDivider <= 0;
@@ -85,7 +85,7 @@ module top(
         
 
     
-        INST_START_TX: begin
+        INST_START_TX: begin // 0
             isSending <= 1;
             clockDivider <= clockDivider + 1;
             if (clockDivider[6:5] == 2'b00) begin
@@ -99,7 +99,7 @@ module top(
                 state <= STATE_DONE;
             end
         end
-        INST_STOP_TX: begin
+        INST_STOP_TX: begin // 1
             isSending <= 1;
             clockDivider <= clockDivider + 1;
             if (clockDivider[6:5] == 2'b00) begin
@@ -143,7 +143,7 @@ module top(
                 scl <= 0;
             end
         end*/
-        INST_WRITE_BYTE: begin
+        INST_WRITE_BYTE: begin // 3
             isSending <= 1;
             clockDivider <= clockDivider + 1;
             sdaOutReg <= byteToSend[3'd7-bitToSend] ? 1'b1 : 1'b0;
@@ -161,7 +161,7 @@ module top(
                 scl <= 0;
             end
         end
-        STATE_RCV_ACK: begin
+        STATE_RCV_ACK: begin // 7
            isSending <= 0;
            clockDivider <= clockDivider + 1;
         
@@ -176,7 +176,7 @@ module top(
            //     sdaIn should be 0 but might as well not check
            // end 
         end
-        STATE_DONE: begin
+        STATE_DONE: begin // 5
             complete <= 1;
             //if (~enable)
             state <= STATE_IDLE;
@@ -195,22 +195,24 @@ module top(
 
         end
         SEND_BYTE_ARRAY: begin
-            
+            // 0
             if (sendByteArrayInstructionKeeper == BYTE_ARRAY_SEND_START && complete == 1) begin 
                 // send start
                 isSending <= 1;
                 state <= INST_START_TX;
                 sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_ADDRESS;
+            // 1
             end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_SEND_ADDRESS && complete == 1) begin
                 // send address
                 state <= INST_WRITE_BYTE;
                 byteToSend <= {OLED_ADDRESS, 1'b0}; // write
                 sendByteArrayInstructionKeeper <= BYTE_ARRAY_RECEIVE_ACK;
-
+            // 2
             end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_RECEIVE_ACK && complete == 1) begin
                 // receive ack
                 state <= INST_STOP_TX;
                 sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_START;
+                SEND_DATA_STATE <= WAIT_FOR_START;
             end else if (complete == 1) begin
                 SEND_DATA_STATE <= WAIT_FOR_START;
                 sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_START;
@@ -225,13 +227,12 @@ module top(
 
 
     
-    
-    if (testTimer == 20'd540000) begin // 27MHz * 20ms = 540000
+    testTimer <= testTimer + 1;
+    if (testTimer == 16'hFFFF) begin // 27MHz * 20ms = 540000
         testTimer <= 0;
         SEND_DATA_STATE <= SEND_BYTE_ARRAY;
-    end else begin
-        testTimer <= testTimer + 1;
-    end
+        complete <= 1;
+    end 
     
     end
 

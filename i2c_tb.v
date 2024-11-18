@@ -6,7 +6,7 @@ always
     #1  clk = ~clk;
     
 initial begin
-    #100000 $finish;
+    #1000000 $finish;
 end
     
 
