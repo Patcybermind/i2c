@@ -21,7 +21,7 @@
         }
       },
       "cells": {
-        "$specify$856": {
+        "$specify$1020": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -233,6 +233,231 @@
         }
       }
     },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000000111111": {
+      "attributes": {
+        "blackbox": "00000000000000000000000000000001",
+        "hdlname": "__ABC9_DELAY",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000000111111"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1020": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000000111111",
+            "T_FALL_MIN": "00000000000000000000000000111111",
+            "T_FALL_TYP": "00000000000000000000000000111111",
+            "T_RISE_MAX": "00000000000000000000000000111111",
+            "T_RISE_MIN": "00000000000000000000000000111111",
+            "T_RISE_TYP": "00000000000000000000000000111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000001001000000": {
+      "attributes": {
+        "blackbox": "00000000000000000000000000000001",
+        "hdlname": "__ABC9_DELAY",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000001001000000"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1020": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000001001000000",
+            "T_FALL_MIN": "00000000000000000000001001000000",
+            "T_FALL_TYP": "00000000000000000000001001000000",
+            "T_RISE_MAX": "00000000000000000000001001000000",
+            "T_RISE_MIN": "00000000000000000000001001000000",
+            "T_RISE_TYP": "00000000000000000000001001000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod\\ALU\\ALU_MODE=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "hdlname": "ALU",
+        "blackbox": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:931.1-1014.10"
+      },
+      "parameter_default_values": {
+        "ALU_MODE": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "SUM": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "COUT": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "I0": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "I1": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "I3": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "CIN": {
+          "direction": "input",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CIN": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:936.24-936.27"
+          }
+        },
+        "COUT": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "I0": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:933.7-933.9"
+          }
+        },
+        "I1": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:934.7-934.9"
+          }
+        },
+        "I3": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:935.7-935.9"
+          }
+        },
+        "SUM": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:937.8-937.11"
+          }
+        }
+      }
+    },
     "ADC": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
@@ -249,7 +474,6 @@
     "ALU": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:931.1-1014.10"
       },
       "parameter_default_values": {
@@ -913,9 +1137,8 @@
     },
     "DFF": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:170.1-181.10"
       },
       "parameter_default_values": {
@@ -1097,9 +1320,8 @@
     },
     "DFFE": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:184.1-198.10"
       },
       "parameter_default_values": {
@@ -2138,9 +2360,8 @@
     },
     "DFFSE": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:220.1-237.10"
       },
       "parameter_default_values": {
@@ -7697,7 +7918,6 @@
     "IBUF": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:553.1-560.10"
       },
       "ports": {
@@ -7711,7 +7931,7 @@
         }
       },
       "cells": {
-        "$specify$126": {
+        "$specify$131": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9462,9 +9682,8 @@
     },
     "LUT1": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_lut": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:2.1-8.10"
       },
       "parameter_default_values": {
@@ -9481,7 +9700,7 @@
         }
       },
       "cells": {
-        "$specify$9": {
+        "$specify$14": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9532,9 +9751,8 @@
     },
     "LUT2": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_lut": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:11.1-19.10"
       },
       "parameter_default_values": {
@@ -9555,7 +9773,7 @@
         }
       },
       "cells": {
-        "$specify$10": {
+        "$specify$15": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9586,7 +9804,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$11": {
+        "$specify$16": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9671,7 +9889,7 @@
         }
       },
       "cells": {
-        "$specify$12": {
+        "$specify$17": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9702,7 +9920,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$13": {
+        "$specify$18": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9733,7 +9951,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$14": {
+        "$specify$19": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9798,9 +10016,8 @@
     },
     "LUT4": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_lut": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:35.1-47.10"
       },
       "parameter_default_values": {
@@ -9829,7 +10046,7 @@
         }
       },
       "cells": {
-        "$specify$15": {
+        "$specify$20": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9860,7 +10077,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$16": {
+        "$specify$21": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9891,7 +10108,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$17": {
+        "$specify$22": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9922,7 +10139,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$18": {
+        "$specify$23": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13027,7 +13244,7 @@
         }
       },
       "cells": {
-        "$specify$45": {
+        "$specify$50": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13058,7 +13275,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$46": {
+        "$specify$51": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13089,7 +13306,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$47": {
+        "$specify$52": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13155,7 +13372,6 @@
     "MUX2_LUT5": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:113.1-125.10"
       },
       "ports": {
@@ -13177,7 +13393,7 @@
         }
       },
       "cells": {
-        "$specify$48": {
+        "$specify$53": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13208,7 +13424,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$49": {
+        "$specify$54": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13239,7 +13455,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$50": {
+        "$specify$55": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13327,7 +13543,7 @@
         }
       },
       "cells": {
-        "$specify$51": {
+        "$specify$56": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13358,7 +13574,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$52": {
+        "$specify$57": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13389,7 +13605,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$53": {
+        "$specify$58": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13477,7 +13693,7 @@
         }
       },
       "cells": {
-        "$specify$54": {
+        "$specify$59": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13508,7 +13724,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$55": {
+        "$specify$60": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13539,7 +13755,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$56": {
+        "$specify$61": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13627,7 +13843,7 @@
         }
       },
       "cells": {
-        "$specify$57": {
+        "$specify$62": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13658,7 +13874,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$58": {
+        "$specify$63": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -13689,7 +13905,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$59": {
+        "$specify$64": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -14605,7 +14821,7 @@
         }
       },
       "cells": {
-        "$specify$127": {
+        "$specify$132": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -17435,7 +17651,7 @@
         }
       },
       "cells": {
-        "$specify$151": {
+        "$specify$156": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -17466,7 +17682,7 @@
             "SRC": [ 8, 9, 10, 11 ]
           }
         },
-        "$specify$152": {
+        "$specify$157": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17501,7 +17717,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$153": {
+        "$specify$158": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17536,7 +17752,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$154": {
+        "$specify$159": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17571,7 +17787,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$155": {
+        "$specify$160": {
           "hide_name": 1,
           "type": "$specify3",
           "parameters": {
@@ -17691,7 +17907,7 @@
         }
       },
       "cells": {
-        "$specify$156": {
+        "$specify$161": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -17722,7 +17938,7 @@
             "SRC": [ 10, 11, 12, 13 ]
           }
         },
-        "$specify$157": {
+        "$specify$162": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17757,7 +17973,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$158": {
+        "$specify$163": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17792,7 +18008,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$159": {
+        "$specify$164": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -17827,7 +18043,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$160": {
+        "$specify$165": {
           "hide_name": 1,
           "type": "$specify3",
           "parameters": {
@@ -17949,7 +18165,7 @@
         }
       },
       "cells": {
-        "$specify$161": {
+        "$specify$166": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -17980,7 +18196,7 @@
             "SRC": [ 14, 15, 16, 17 ]
           }
         },
-        "$specify$162": {
+        "$specify$167": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18015,7 +18231,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$163": {
+        "$specify$168": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18050,7 +18266,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$164": {
+        "$specify$169": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18085,7 +18301,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$165": {
+        "$specify$170": {
           "hide_name": 1,
           "type": "$specify3",
           "parameters": {
@@ -18684,7 +18900,7 @@
         }
       },
       "cells": {
-        "$specify$166": {
+        "$specify$171": {
           "hide_name": 1,
           "type": "$specify3",
           "parameters": {
@@ -18721,7 +18937,7 @@
             "SRC": [ 100 ]
           }
         },
-        "$specify$167": {
+        "$specify$172": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18756,7 +18972,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$168": {
+        "$specify$173": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18791,7 +19007,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$169": {
+        "$specify$174": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18826,7 +19042,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$170": {
+        "$specify$175": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18861,7 +19077,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$171": {
+        "$specify$176": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18896,7 +19112,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$172": {
+        "$specify$177": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18931,7 +19147,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$173": {
+        "$specify$178": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -18966,7 +19182,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$174": {
+        "$specify$179": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19001,7 +19217,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$175": {
+        "$specify$180": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19036,7 +19252,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$176": {
+        "$specify$181": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19071,7 +19287,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$177": {
+        "$specify$182": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19106,7 +19322,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$178": {
+        "$specify$183": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19607,7 +19823,7 @@
         }
       },
       "cells": {
-        "$specify$179": {
+        "$specify$184": {
           "hide_name": 1,
           "type": "$specify3",
           "parameters": {
@@ -19644,7 +19860,7 @@
             "SRC": [ 108 ]
           }
         },
-        "$specify$180": {
+        "$specify$185": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19679,7 +19895,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$181": {
+        "$specify$186": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19714,7 +19930,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$182": {
+        "$specify$187": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19749,7 +19965,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$183": {
+        "$specify$188": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19784,7 +20000,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$184": {
+        "$specify$189": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19819,7 +20035,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$185": {
+        "$specify$190": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19854,7 +20070,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$186": {
+        "$specify$191": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19889,7 +20105,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$187": {
+        "$specify$192": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19924,7 +20140,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$188": {
+        "$specify$193": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19959,7 +20175,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$189": {
+        "$specify$194": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -19994,7 +20210,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$190": {
+        "$specify$195": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -20029,7 +20245,7 @@
             "SRC_EN": [ "1" ]
           }
         },
-        "$specify$191": {
+        "$specify$196": {
           "hide_name": 1,
           "type": "$specrule",
           "parameters": {
@@ -21964,7 +22180,6 @@
     "VCC": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:545.1-547.10"
       },
       "ports": {
@@ -22019,7 +22234,7 @@
         }
       },
       "cells": {
-        "$specify$19": {
+        "$specify$24": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22050,7 +22265,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$20": {
+        "$specify$25": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22081,7 +22296,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$21": {
+        "$specify$26": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22112,7 +22327,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$22": {
+        "$specify$27": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22143,7 +22358,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$23": {
+        "$specify$28": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22258,7 +22473,7 @@
         }
       },
       "cells": {
-        "$specify$24": {
+        "$specify$29": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22289,7 +22504,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$25": {
+        "$specify$30": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22320,7 +22535,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$26": {
+        "$specify$31": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22351,7 +22566,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$27": {
+        "$specify$32": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22382,7 +22597,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$28": {
+        "$specify$33": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22413,7 +22628,7 @@
             "SRC": [ 7 ]
           }
         },
-        "$specify$29": {
+        "$specify$34": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22539,7 +22754,7 @@
         }
       },
       "cells": {
-        "$specify$30": {
+        "$specify$35": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22570,7 +22785,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$31": {
+        "$specify$36": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22601,7 +22816,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$32": {
+        "$specify$37": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22632,7 +22847,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$33": {
+        "$specify$38": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22663,7 +22878,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$34": {
+        "$specify$39": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22694,7 +22909,7 @@
             "SRC": [ 7 ]
           }
         },
-        "$specify$35": {
+        "$specify$40": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22725,7 +22940,7 @@
             "SRC": [ 8 ]
           }
         },
-        "$specify$36": {
+        "$specify$41": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22862,7 +23077,7 @@
         }
       },
       "cells": {
-        "$specify$37": {
+        "$specify$42": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22893,7 +23108,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$38": {
+        "$specify$43": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22924,7 +23139,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$39": {
+        "$specify$44": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22955,7 +23170,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$40": {
+        "$specify$45": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -22986,7 +23201,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$41": {
+        "$specify$46": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -23017,7 +23232,7 @@
             "SRC": [ 7 ]
           }
         },
-        "$specify$42": {
+        "$specify$47": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -23048,7 +23263,7 @@
             "SRC": [ 8 ]
           }
         },
-        "$specify$43": {
+        "$specify$48": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -23079,7 +23294,7 @@
             "SRC": [ 9 ]
           }
         },
-        "$specify$44": {
+        "$specify$49": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -24430,7 +24645,7 @@
     "top": {
       "attributes": {
         "top": "00000000000000000000000000000001",
-        "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:3.1-14.10"
+        "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:3.1-34.10"
       },
       "ports": {
         "i2cSDA": {
@@ -24440,9 +24655,815 @@
         "i2cSCL": {
           "direction": "output",
           "bits": [ 3 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 4 ]
         }
       },
       "cells": {
+        "clk_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+          },
+          "attributes": {
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I": [ 4 ],
+            "O": [ 5 ]
+          }
+        },
+        "countertest_DFF_Q": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 6 ],
+            "Q": [ 7 ]
+          }
+        },
+        "countertest_DFF_Q_1": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 8 ],
+            "Q": [ 9 ]
+          }
+        },
+        "countertest_DFF_Q_10": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 10 ],
+            "Q": [ 11 ]
+          }
+        },
+        "countertest_DFF_Q_10_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 12 ],
+            "COUT": [ 13 ],
+            "I0": [ 14 ],
+            "I1": [ 11 ],
+            "I3": [ 15 ],
+            "SUM": [ 10 ]
+          }
+        },
+        "countertest_DFF_Q_11": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 16 ],
+            "Q": [ 17 ]
+          }
+        },
+        "countertest_DFF_Q_11_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 18 ],
+            "COUT": [ 12 ],
+            "I0": [ 14 ],
+            "I1": [ 17 ],
+            "I3": [ 15 ],
+            "SUM": [ 16 ]
+          }
+        },
+        "countertest_DFF_Q_12": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 19 ],
+            "Q": [ 20 ]
+          }
+        },
+        "countertest_DFF_Q_12_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 21 ],
+            "COUT": [ 18 ],
+            "I0": [ 14 ],
+            "I1": [ 20 ],
+            "I3": [ 15 ],
+            "SUM": [ 19 ]
+          }
+        },
+        "countertest_DFF_Q_13": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 22 ],
+            "Q": [ 23 ]
+          }
+        },
+        "countertest_DFF_Q_13_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 24 ],
+            "COUT": [ 21 ],
+            "I0": [ 14 ],
+            "I1": [ 23 ],
+            "I3": [ 15 ],
+            "SUM": [ 22 ]
+          }
+        },
+        "countertest_DFF_Q_14": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 25 ],
+            "Q": [ 26 ]
+          }
+        },
+        "countertest_DFF_Q_14_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 27 ],
+            "COUT": [ 24 ],
+            "I0": [ 14 ],
+            "I1": [ 26 ],
+            "I3": [ 15 ],
+            "SUM": [ 25 ]
+          }
+        },
+        "countertest_DFF_Q_14_D_ALU_SUM_CIN_ALU_COUT": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 14 ],
+            "COUT": [ 27 ],
+            "I0": [ 15 ],
+            "I1": [ 28 ],
+            "I3": [ 15 ],
+            "SUM": [ 29 ]
+          }
+        },
+        "countertest_DFF_Q_15": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 30 ],
+            "Q": [ 28 ]
+          }
+        },
+        "countertest_DFF_Q_15_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input"
+          },
+          "connections": {
+            "F": [ 30 ],
+            "I0": [ 28 ]
+          }
+        },
+        "countertest_DFF_Q_1_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 31 ],
+            "COUT": [ 32 ],
+            "I0": [ 14 ],
+            "I1": [ 9 ],
+            "I3": [ 15 ],
+            "SUM": [ 8 ]
+          }
+        },
+        "countertest_DFF_Q_2": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 33 ],
+            "Q": [ 34 ]
+          }
+        },
+        "countertest_DFF_Q_2_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 35 ],
+            "COUT": [ 31 ],
+            "I0": [ 14 ],
+            "I1": [ 34 ],
+            "I3": [ 15 ],
+            "SUM": [ 33 ]
+          }
+        },
+        "countertest_DFF_Q_3": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 36 ],
+            "Q": [ 37 ]
+          }
+        },
+        "countertest_DFF_Q_3_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 38 ],
+            "COUT": [ 35 ],
+            "I0": [ 14 ],
+            "I1": [ 37 ],
+            "I3": [ 15 ],
+            "SUM": [ 36 ]
+          }
+        },
+        "countertest_DFF_Q_4": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 39 ],
+            "Q": [ 40 ]
+          }
+        },
+        "countertest_DFF_Q_4_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 41 ],
+            "COUT": [ 38 ],
+            "I0": [ 14 ],
+            "I1": [ 40 ],
+            "I3": [ 15 ],
+            "SUM": [ 39 ]
+          }
+        },
+        "countertest_DFF_Q_5": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 42 ],
+            "Q": [ 43 ]
+          }
+        },
+        "countertest_DFF_Q_5_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 44 ],
+            "COUT": [ 41 ],
+            "I0": [ 14 ],
+            "I1": [ 43 ],
+            "I3": [ 15 ],
+            "SUM": [ 42 ]
+          }
+        },
+        "countertest_DFF_Q_6": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 45 ],
+            "Q": [ 46 ]
+          }
+        },
+        "countertest_DFF_Q_6_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 47 ],
+            "COUT": [ 44 ],
+            "I0": [ 14 ],
+            "I1": [ 46 ],
+            "I3": [ 15 ],
+            "SUM": [ 45 ]
+          }
+        },
+        "countertest_DFF_Q_7": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 48 ],
+            "Q": [ 49 ]
+          }
+        },
+        "countertest_DFF_Q_7_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 50 ],
+            "COUT": [ 47 ],
+            "I0": [ 14 ],
+            "I1": [ 49 ],
+            "I3": [ 15 ],
+            "SUM": [ 48 ]
+          }
+        },
+        "countertest_DFF_Q_8": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 51 ],
+            "Q": [ 52 ]
+          }
+        },
+        "countertest_DFF_Q_8_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 53 ],
+            "COUT": [ 50 ],
+            "I0": [ 14 ],
+            "I1": [ 52 ],
+            "I3": [ 15 ],
+            "SUM": [ 51 ]
+          }
+        },
+        "countertest_DFF_Q_9": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 5 ],
+            "D": [ 54 ],
+            "Q": [ 55 ]
+          }
+        },
+        "countertest_DFF_Q_9_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 13 ],
+            "COUT": [ 53 ],
+            "I0": [ 14 ],
+            "I1": [ 55 ],
+            "I3": [ 15 ],
+            "SUM": [ 54 ]
+          }
+        },
+        "countertest_DFF_Q_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5"
+          },
+          "port_directions": {
+            "CIN": "input",
+            "COUT": "output",
+            "I0": "input",
+            "I1": "input",
+            "I3": "input",
+            "SUM": "output"
+          },
+          "connections": {
+            "CIN": [ 32 ],
+            "COUT": [ 56 ],
+            "I0": [ 14 ],
+            "I1": [ 7 ],
+            "I3": [ 15 ],
+            "SUM": [ 6 ]
+          }
+        },
+        "countertest_DFF_Q_D_ALU_SUM_I3_VCC_V": {
+          "hide_name": 0,
+          "type": "VCC",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 15 ]
+          }
+        },
         "i2cSCL_OBUF_O": {
           "hide_name": 0,
           "type": "OBUF",
@@ -24456,7 +25477,7 @@
             "O": "output"
           },
           "connections": {
-            "I": [ 4 ],
+            "I": [ 57 ],
             "O": [ 3 ]
           }
         },
@@ -24475,13 +25496,303 @@
             "OEN": "input"
           },
           "connections": {
-            "I": [ 4 ],
+            "I": [ 14 ],
             "IO": [ 2 ],
-            "O": [ 5 ],
-            "OEN": [ 4 ]
+            "O": [ 58 ],
+            "OEN": [ 59 ]
           }
         },
-        "isSendingWire_GND_G": {
+        "i2cSDA_IOBUF_IO_OEN_LUT2_F": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "1101"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "F": [ 59 ],
+            "I0": [ 60 ],
+            "I1": [ 61 ]
+          }
+        },
+        "isSendingReg_DFFSE_Q": {
+          "hide_name": 0,
+          "type": "DFFSE",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:67.8-67.66"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SET": "input"
+          },
+          "connections": {
+            "CE": [ 62 ],
+            "CLK": [ 5 ],
+            "D": [ 63 ],
+            "Q": [ 60 ],
+            "SET": [ 14 ]
+          }
+        },
+        "isSendingReg_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input"
+          },
+          "connections": {
+            "F": [ 63 ],
+            "I0": [ 60 ]
+          }
+        },
+        "scl_DFFSE_Q": {
+          "hide_name": 0,
+          "type": "DFFSE",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:67.8-67.66"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output",
+            "SET": "input"
+          },
+          "connections": {
+            "CE": [ 62 ],
+            "CLK": [ 5 ],
+            "D": [ 64 ],
+            "Q": [ 57 ],
+            "SET": [ 14 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "O": "output",
+            "S0": "input"
+          },
+          "connections": {
+            "I0": [ 65 ],
+            "I1": [ 66 ],
+            "O": [ 62 ],
+            "S0": [ 67 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input"
+          },
+          "connections": {
+            "F": [ 65 ],
+            "I0": [ 14 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 66 ],
+            "I0": [ 68 ],
+            "I1": [ 69 ],
+            "I2": [ 70 ],
+            "I3": [ 71 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0_LUT2_F": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "F": [ 69 ],
+            "I0": [ 11 ],
+            "I1": [ 17 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0_LUT2_F_1": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "F": [ 68 ],
+            "I0": [ 52 ],
+            "I1": [ 55 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 70 ],
+            "I0": [ 7 ],
+            "I1": [ 9 ],
+            "I2": [ 34 ],
+            "I3": [ 37 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0_LUT4_F_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 71 ],
+            "I0": [ 20 ],
+            "I1": [ 23 ],
+            "I2": [ 26 ],
+            "I3": [ 28 ]
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0_LUT4_F_2": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 67 ],
+            "I0": [ 40 ],
+            "I1": [ 43 ],
+            "I2": [ 46 ],
+            "I3": [ 49 ]
+          }
+        },
+        "scl_DFFSE_Q_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input"
+          },
+          "connections": {
+            "F": [ 64 ],
+            "I0": [ 57 ]
+          }
+        },
+        "scl_DFFSE_Q_SET_GND_G": {
           "hide_name": 0,
           "type": "GND",
           "parameters": {
@@ -24492,11 +25803,310 @@
             "G": "output"
           },
           "connections": {
-            "G": [ 4 ]
+            "G": [ 14 ]
+          }
+        },
+        "sdaOutReg_DFFE_Q": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:25.5-32.8|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:19.7-19.56"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 62 ],
+            "CLK": [ 5 ],
+            "D": [ 72 ],
+            "Q": [ 61 ]
+          }
+        },
+        "sdaOutReg_DFFE_Q_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15"
+          },
+          "port_directions": {
+            "F": "output",
+            "I0": "input"
+          },
+          "connections": {
+            "F": [ 72 ],
+            "I0": [ 61 ]
           }
         }
       },
       "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:6.8-6.11"
+          }
+        },
+        "clk_IBUF_I_O": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+          }
+        },
+        "countertest": {
+          "hide_name": 0,
+          "bits": [ 28, 26, 23, 20, 17, 11, 55, 52, 49, 46, 43, 40, 37, 34, 9, 7 ],
+          "attributes": {
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:23.16-23.27"
+          }
+        },
+        "countertest_DFF_Q_10_D": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_11_D": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_11_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_12_D": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_12_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_13_D": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_13_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_14_D": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_14_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_14_D_ALU_SUM_CIN_ALU_COUT_SUM": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "unused_bits": "0 "
+          }
+        },
+        "countertest_DFF_Q_14_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_15_D": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_1_D": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_1_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_2_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_3_D": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_3_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_4_D": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_4_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_5_D": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_5_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_6_D": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_6_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 44 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_7_D": {
+          "hide_name": 0,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_7_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_8_D": {
+          "hide_name": 0,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_8_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 50 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_9_D": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_9_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_9_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 53 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29"
+          }
+        },
+        "countertest_DFF_Q_D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+          }
+        },
+        "countertest_DFF_Q_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 56 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:26.24-26.39|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "unused_bits": "0 "
+          }
+        },
+        "countertest_DFF_Q_D_ALU_SUM_I3": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
         "i2cSCL": {
           "hide_name": 0,
           "bits": [ 3 ],
@@ -24513,30 +26123,110 @@
         },
         "i2cSDA_IOBUF_IO_O": {
           "hide_name": 0,
-          "bits": [ 5 ],
+          "bits": [ 58 ],
           "attributes": {
             "unused_bits": "0 "
           }
         },
+        "i2cSDA_IOBUF_IO_OEN": {
+          "hide_name": 0,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "isSendingReg": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:17.9-17.21"
+          }
+        },
+        "isSendingReg_DFFSE_Q_D": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+          }
+        },
         "isSendingWire": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 60 ],
           "attributes": {
-            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:9.10-9.23"
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:16.10-16.23"
+          }
+        },
+        "scl": {
+          "hide_name": 0,
+          "bits": [ 57 ],
+          "attributes": {
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:8.9-8.12"
           }
         },
         "sclWire": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 57 ],
           "attributes": {
-            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:7.10-7.17"
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:9.10-9.17"
+          }
+        },
+        "scl_DFFSE_Q_CE": {
+          "hide_name": 0,
+          "bits": [ 62 ],
+          "attributes": {
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "scl_DFFSE_Q_CE_MUX2_LUT5_O_S0": {
+          "hide_name": 0,
+          "bits": [ 68, 69, 70, 71, 67 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "scl_DFFSE_Q_D": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+          }
+        },
+        "scl_DFFSE_Q_SET": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/home/patcybermind/Downloads/oss-cad-suite-linux-x64-20240926/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:131.9-131.10"
+          }
+        },
+        "sdaOutReg": {
+          "hide_name": 0,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:13.9-13.18"
+          }
+        },
+        "sdaOutReg_DFFE_Q_D": {
+          "hide_name": 0,
+          "bits": [ 72 ],
+          "attributes": {
           }
         },
         "sdaOutWire": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 61 ],
           "attributes": {
-            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:8.10-8.20"
+            "src": "/home/patcybermind/Documents/fpga/i2c/i2c/i2c.v:12.10-12.20"
           }
         }
       }

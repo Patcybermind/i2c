@@ -6,12 +6,13 @@ always
     #1  clk = ~clk;
     
 initial begin
-    #100000 $finish;
+    #1000000 $finish;
 end
     
 
 initial begin
     $dumpfile("i2c.vcd");
+    //$dumpvars(0,test, i2cSDA, i2cSCL);
     $dumpvars(0,test);
 end
 
@@ -23,16 +24,25 @@ wire [7:0] i2cByteReceived;
 wire i2cComplete;
 wire i2cEnable;
 
-wire i2cSda;
 
-wire i2cScl;
+
+
+
+//wire i2cScl;
 wire sdaIn;
 wire sdaOut;
 wire isSending;
-assign i2cSda = (isSending & ~sdaOut) ? 1'b0 : 1'b1;
-assign sdaIn = i2cSda ? 1'b1 : 1'b0;
+//assign i2cSda = (isSending & ~sdaOut) ? 1'b0 : 1'b1;
+//assign sdaIn = i2cSda ? 1'b1 : 1'b0;
 
-i2c c(
+top i2c_inst (
+    .i2cSDA(i2cSDA),
+    .i2cSCL(i2cSCL),
+    .clk(clk)
+);
+
+endmodule
+/*i2c c(
     clk,
     sdaIn,
     sdaOut,
@@ -51,4 +61,4 @@ wire adcDataReady;
 reg adcEnable = 1;
 
 
-endmodule
+endmodule*/

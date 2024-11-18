@@ -5,6 +5,7 @@ IO_LOC  "btn2" 87;
 IO_PORT "btn2" IO_TYPE=LVCMOS33;
 
 IO_LOC  "i2cSDA" 53;
+IO_PORT "i2cSDA" DRIVE=4;
 
 IO_LOC  "i2cSCL" 52;
 

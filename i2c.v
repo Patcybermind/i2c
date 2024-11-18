@@ -2,17 +2,37 @@
 
 module top(
  inout i2cSDA,
- output i2cSCL
+ output i2cSCL,
+ input clk
 );
+    reg scl = 1;
     wire sclWire;
+    assign sclWire = scl;
+
     wire sdaOutWire;
+    reg sdaOutReg = 0;
+    assign sdaOutWire = sdaOutReg;
+
     wire isSendingWire;
+    reg isSendingReg = 1;
+    assign isSendingWire = isSendingReg;
+
     assign i2cSDA = (isSendingWire & ~sdaOutWire) ? 1'b0 : 1'bz;
     assign i2cSCL = sclWire;
 
+    reg [15:0] countertest = 0;
+
+    always @(posedge clk) begin
+        countertest <= countertest + 1;
+        if (countertest == 0) begin
+            scl <= ~scl;
+            isSendingReg <= ~isSendingReg;
+            sdaOutReg <= ~sdaOutReg;
+        end
+    end // TODO: REMEMBER I SET SDA PIN TO PULL UP IN THE CST
     
 endmodule
-
+/*
 module i2c (
     input clk,
     input sdaIn,
@@ -37,7 +57,7 @@ module i2c (
         scl <= 1;
         sdaOutReg <= 1;
     end
-endmodule
+endmodule*/
 
 /*    localparam INST_START_TX = 0;
     localparam INST_STOP_TX = 1;
