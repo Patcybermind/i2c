@@ -1,4 +1,5 @@
 {
     "board": "tangnano20k",
+    "topModule": "top.v",
     "testBenches": ["i2c_tb.v"]
 }
