@@ -21,7 +21,9 @@ module i2c(
     assign i2cSCL = sclWire;
 
 
-    
+    reg [23:0] waitBeforeInitCounter = 24'h000000;
+    localparam WAIT_BEFORE_INIT = 24'h66FF30; // started with 66 before BUT MUST CHANGE FOR SIMS
+    // CHANGE TO 00FF30 FOR SIMS OR ELSE NOTHING SHOWS UP
 
 
 
@@ -44,10 +46,13 @@ module i2c(
     // send_data state machine
     localparam WAIT_FOR_START = 0;
     localparam SEND_INIT = 1;
+    localparam SEND_DATA = 2;
 
     reg [3:0] SEND_DATA_STATE = WAIT_FOR_START;
     reg [1:0] readyToSendByte = 0;
-    reg [3:0] sendByteArrayInstructionKeeper = 0;
+    reg [3:0] sendInitInstructionKeeper = 0;
+    reg [3:0] sendDataInstructionKeeper = 0;
+
 
     localparam BYTE_ARRAY_SEND_START = 0;
     localparam BYTE_ARRAY_SEND_BYTE = 1;
@@ -57,6 +62,7 @@ module i2c(
     reg [19:0] testTimer  = 0;
 
     reg [7:0] byteToSend;
+    reg [7:0] dataToSend;
     reg [2:0] state = STATE_IDLE;
     reg complete= 1; // CAREFULL AS THIS MIGHT NOT INITIALIZE TO 1 ON REAL FPGA
 
@@ -90,6 +96,8 @@ module i2c(
 
     reg hasAddressBeenSent = 0;
     reg hasZeroBeenSent = 0;
+    reg has40BeenSent = 0;
+    reg hasDataBeenSent = 0;
     reg [7:0] initCodeIndex = 0;
 
     always @(posedge clk) begin
@@ -210,12 +218,12 @@ module i2c(
     case (SEND_DATA_STATE)
         WAIT_FOR_START: begin
             // just dont do anything
-            sendByteArrayInstructionKeeper <= 0;
+            sendInitInstructionKeeper <= 0;
 
         end
         SEND_INIT: begin
             // 0
-            if (sendByteArrayInstructionKeeper == BYTE_ARRAY_SEND_START && complete == 1) begin 
+            if (sendInitInstructionKeeper == BYTE_ARRAY_SEND_START && complete == 1) begin 
 
             // send start and reset values
             hasAddressBeenSent <= 0;
@@ -224,10 +232,10 @@ module i2c(
 
             isSending <= 1;
             state <= INST_START_TX;
-            sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
+            sendInitInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
 
             // 1
-            end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_SEND_BYTE && complete == 1) begin
+            end else if (sendInitInstructionKeeper == BYTE_ARRAY_SEND_BYTE && complete == 1) begin
                             // SEND ADRESS THEN SEND 00 THE ITERATE OVER ARRAY BUT WAIT FOR ACK BEFORE EACH
             // send address
             if (hasAddressBeenSent == 0) begin
@@ -239,11 +247,11 @@ module i2c(
                 hasZeroBeenSent <= 1;
                 state <= INST_WRITE_BYTE;
             end else if (initCodeIndex == 8'd23) begin // STOP TX MAKE SURE TO ADJUST TO ARRAY SIZE
-                //sendByteArrayInstructionKeeper <= BYTE_ARRAY_STOP_TX;
+                //sendInitInstructionKeeper <= BYTE_ARRAY_STOP_TX;
                 state <= INST_STOP_TX;
                 initCodeIndex <= 0;
                 complete <= 0;
-                sendByteArrayInstructionKeeper <= BYTE_ARRAY_STOP_TX;
+                sendInitInstructionKeeper <= BYTE_ARRAY_STOP_TX;
                 hasAddressBeenSent <= 0;
                 hasZeroBeenSent <= 0;
                 SEND_DATA_STATE <= WAIT_FOR_START;
@@ -256,15 +264,15 @@ module i2c(
             
 
 
-            sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
+            sendInitInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
 
             // 2
-            /*end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_STOP_TX && complete == 1) begin // RECEIVING ACK DEALT WITH BY WRITE_BYTE
+            /*end else if (sendInitInstructionKeeper == BYTE_ARRAY_STOP_TX && complete == 1) begin // RECEIVING ACK DEALT WITH BY WRITE_BYTE
 
             // received ack
             
             state <= INST_STOP_TX; // STOP
-            sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_START;
+            sendInitInstructionKeeper <= BYTE_ARRAY_SEND_START;
             SEND_DATA_STATE <= WAIT_FOR_START;
 
             
@@ -272,11 +280,58 @@ module i2c(
             end else if (complete == 1) begin
 
             SEND_DATA_STATE <= WAIT_FOR_START;
-            sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_START;
+            sendInitInstructionKeeper <= BYTE_ARRAY_SEND_START;
             */
             end
 
         end
+        SEND_DATA: begin // 2
+            if (sendDataInstructionKeeper == BYTE_ARRAY_SEND_START && complete == 1) begin 
+
+            // send start and reset values
+            hasAddressBeenSent <= 0;
+            has40BeenSent <= 0;
+            hasDataBeenSent <= 0;
+
+            isSending <= 1;
+            state <= INST_START_TX;
+            sendDataInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
+
+            // 1
+            end else if (sendDataInstructionKeeper == BYTE_ARRAY_SEND_BYTE && complete == 1) begin
+                            // SEND ADRESS THEN SEND 00 THE ITERATE OVER ARRAY BUT WAIT FOR ACK BEFORE EACH
+            // send address
+            if (hasAddressBeenSent == 0) begin
+                byteToSend <= {OLED_ADDRESS, 1'b0}; // write
+                hasAddressBeenSent <= 1;
+                state <= INST_WRITE_BYTE;
+            end else if (has40BeenSent == 0) begin
+                byteToSend <= {8'h40}; // 
+                has40BeenSent <= 1;
+                state <= INST_WRITE_BYTE;
+            end else if (hasDataBeenSent == 0) begin // STOP TX MAKE SURE TO ADJUST TO ARRAY SIZE
+                state <= INST_WRITE_BYTE;
+                byteToSend <= dataToSend; // TODO: 
+                hasDataBeenSent <= 1;
+                
+                
+            end else if (has40BeenSent && hasAddressBeenSent && hasDataBeenSent) begin
+                state <= INST_STOP_TX;
+                
+                complete <= 0;
+                sendDataInstructionKeeper <= BYTE_ARRAY_STOP_TX;
+                hasAddressBeenSent <= 0;
+                has40BeenSent <= 0;
+                hasDataBeenSent <= 0;
+                SEND_DATA_STATE <= WAIT_FOR_START;
+            end
+            
+
+
+            sendDataInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
+            end
+        end
+        
 
         default: begin
             SEND_DATA_STATE <= WAIT_FOR_START;
@@ -284,12 +339,33 @@ module i2c(
     endcase
 
 
-    
+    /*
     testTimer <= testTimer + 1;
     if (testTimer == 16'hFFFF) begin // 27MHz * 20ms = 540000
         testTimer <= 0;
+        SEND_DATA_STATE <= SEND_DATA;
+        complete <= 1;
+        dataToSend <= 8'hAA;
+    end 
+    */
+
+    
+    if (waitBeforeInitCounter == WAIT_BEFORE_INIT) begin
         SEND_DATA_STATE <= SEND_INIT;
         complete <= 1;
-    end 
+        waitBeforeInitCounter <= waitBeforeInitCounter + 9; // we only want it to count down once
+    end else if (waitBeforeInitCounter < WAIT_BEFORE_INIT) begin
+        waitBeforeInitCounter <= waitBeforeInitCounter + 1;
+    end else if (waitBeforeInitCounter > WAIT_BEFORE_INIT) begin // we can star the test send data routine
+
+        testTimer <= testTimer + 1;
+        if (testTimer == 16'hFFFF) begin // 27MHz * 20ms = 540000
+            testTimer <= 0;
+            SEND_DATA_STATE <= SEND_DATA;
+            complete <= 1;
+            dataToSend <= 8'hFF; // 8'hAA works well because its 10101010
+        end
+
+    end
     end
 endmodule
