@@ -22,7 +22,7 @@ module i2c(
 
 
     reg [23:0] waitBeforeInitCounter = 24'h000000;
-    localparam WAIT_BEFORE_INIT = 24'h00FF30; // started with 66 before BUT MUST CHANGE FOR SIMS
+    localparam WAIT_BEFORE_INIT = 24'h66FF30; // started with 66 before BUT MUST CHANGE FOR SIMS
     // CHANGE TO 00FF30 FOR SIMS OR ELSE NOTHING SHOWS UP
 
 
