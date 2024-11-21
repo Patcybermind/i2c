@@ -97,7 +97,7 @@ module i2c(
     	// states here
         STATE_IDLE: begin // 4
             //if (enable) begin
-            complete <= 0;
+            complete <= 0; // was 0
             clockDivider <= 0;
             bitToSend <= 0;
             //state <= {1'b0,instruction};
@@ -239,7 +239,14 @@ module i2c(
                 hasZeroBeenSent <= 1;
                 state <= INST_WRITE_BYTE;
             end else if (initCodeIndex == 8'd23) begin // STOP TX MAKE SURE TO ADJUST TO ARRAY SIZE
+                //sendByteArrayInstructionKeeper <= BYTE_ARRAY_STOP_TX;
+                state <= INST_STOP_TX;
+                initCodeIndex <= 0;
+                complete <= 0;
                 sendByteArrayInstructionKeeper <= BYTE_ARRAY_STOP_TX;
+                hasAddressBeenSent <= 0;
+                hasZeroBeenSent <= 0;
+                SEND_DATA_STATE <= WAIT_FOR_START;
                 
             end else begin
                 byteToSend <= initCode[initCodeIndex];
@@ -252,7 +259,7 @@ module i2c(
             sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
 
             // 2
-            end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_STOP_TX && complete == 1) begin // RECEIVING ACK DEALT WITH BY WRITE_BYTE
+            /*end else if (sendByteArrayInstructionKeeper == BYTE_ARRAY_STOP_TX && complete == 1) begin // RECEIVING ACK DEALT WITH BY WRITE_BYTE
 
             // received ack
             
@@ -266,7 +273,7 @@ module i2c(
 
             SEND_DATA_STATE <= WAIT_FOR_START;
             sendByteArrayInstructionKeeper <= BYTE_ARRAY_SEND_START;
-
+            */
             end
 
         end
@@ -279,7 +286,7 @@ module i2c(
 
     
     testTimer <= testTimer + 1;
-    if (testTimer == 16'hD2F0) begin // 27MHz * 20ms = 540000
+    if (testTimer == 16'hFFFF) begin // 27MHz * 20ms = 540000
         testTimer <= 0;
         SEND_DATA_STATE <= SEND_INIT;
         complete <= 1;
