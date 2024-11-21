@@ -22,7 +22,7 @@ module i2c(
 
 
     reg [23:0] waitBeforeInitCounter = 24'h000000;
-    localparam WAIT_BEFORE_INIT = 24'h66FF30; // started with 66 before BUT MUST CHANGE FOR SIMS
+    localparam WAIT_BEFORE_INIT = 24'h00FF30; // started with 66 before BUT MUST CHANGE FOR SIMS
     // CHANGE TO 00FF30 FOR SIMS OR ELSE NOTHING SHOWS UP
 
 
@@ -328,7 +328,7 @@ module i2c(
             
 
 
-            sendDataInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
+            //sendDataInstructionKeeper <= BYTE_ARRAY_SEND_BYTE;
             end
         end
         
@@ -357,13 +357,14 @@ module i2c(
     end else if (waitBeforeInitCounter < WAIT_BEFORE_INIT) begin
         waitBeforeInitCounter <= waitBeforeInitCounter + 1;
     end else if (waitBeforeInitCounter > WAIT_BEFORE_INIT) begin // we can star the test send data routine
-
+        
         testTimer <= testTimer + 1;
         if (testTimer == 16'hFFFF) begin // 27MHz * 20ms = 540000
             testTimer <= 0;
             SEND_DATA_STATE <= SEND_DATA;
             complete <= 1;
-            dataToSend <= 8'hFF; // 8'hAA works well because its 10101010
+            dataToSend <= 8'hF0; // 8'hAA works well because its 10101010
+            sendDataInstructionKeeper <= BYTE_ARRAY_SEND_START;
         end
 
     end
